@@ -2,30 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berry Pop - Bouder Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Berry Pop | Bouder Games</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap">
     <style>
         body {
-            background: #0d0d0d;
-            color: white;
-            font-family: sans-serif;
-            padding: 20px;
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background: url('backgroundforboudergames.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
             text-align: center;
+            padding: 40px 20px;
         }
-        img {
-            max-width: 100%;
-            border-radius: 10px;
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.65);
+            padding: 30px;
+            border-radius: 15px;
         }
-        a {
-            color: #ff3399;
+
+        img.logo {
+            max-width: 200px;
+            margin: 20px auto;
+            border-radius: 8px;
+            border: 2px solid white;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .back-button {
+            margin-top: 40px;
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff7b00;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ffa94d;
         }
     </style>
 </head>
 <body>
-<h1>🍓 Berry Pop</h1>
-<p>A juicy one-tap game where you pop berries before they hit the ground!</p>
-<img src="berrypoplogo.webp" alt="Berry Pop Screenshot" />
-<p>💥 Launching soon on web and mobile!</p>
-<p><a href="index.html">← Back to homepage</a></p>
+<div class="container">
+    <h1>🍓 Berry Pop</h1>
+    <img class="logo" src="berrypoplogo.webp" alt="Berry Pop Logo" />
+    <p class="description">
+        A tap-tap arcade game where berries fall and you must catch them before they hit the ground!
+    </p>
+
+    <h2>🎮 Features:</h2>
+    <ul>
+        <li>🍓 Tap berries before they bounce away!</li>
+        <li>💰 Score = Coins! Collect and unlock boosts.</li>
+        <li>⭐ Special berries give extra points.</li>
+        <li>📱 Simple, fun gameplay for quick sessions.</li>
+    </ul>
+
+    <a href="index.html" class="back-button">← Back to Home</a>
+</div>
 </body>
 </html>
