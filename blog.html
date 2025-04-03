@@ -1,33 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dev Blog - Bouder Games</title>
-    <style>
-        body {
-            background: #101010;
-            color: #fff;
-            font-family: sans-serif;
-            padding: 20px;
-            max-width: 700px;
-            margin: auto;
-        }
-        h2 {
-            color: #ffcc00;
-        }
-        a {
-            color: #aaa;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dev Blog | Bouder Games</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url('backgroundforboudergames.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .post {
+      margin-bottom: 2.5rem;
+      text-align: left;
+    }
+    .post h2 {
+      color: #ffcc66;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .post p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background: #444;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background: #666;
+    }
+  </style>
 </head>
 <body>
-<h1>📝 Bouder Devlog</h1>
-<h2>April 3, 2025 – Website Launched</h2>
-<p>Our official site is now live! Includes Flame Harvest, Berry Pop, and more.</p>
-<hr>
-<h2>March 2025 – Development Begins</h2>
-<p>First prototypes built in Unity. Flame Harvest and Berry Pop enter early stage testing.</p>
-<p><a href="index.html">← Back to homepage</a></p>
+  <div class="container">
+    <h1>🧵 Developer Blog</h1>
+
+    <div class="post">
+      <h2>Dev Log #1 – Launch Progress</h2>
+      <p>Welcome to the Bouder Games dev blog! Here you'll find updates about our development journey, features, and more. Stay tuned for regular updates!</p>
+    </div>
+
+    <div class="post">
+      <h2>New Feature – Berry Pop Mechanics</h2>
+      <p>We've added new berry types and improved bounce physics. Tap-tap gameplay is feeling juicier than ever 🍓</p>
+    </div>
+
+    <a href="index.html" class="back-button">← Return to Homepage</a>
+  </div>
 </body>
 </html>
