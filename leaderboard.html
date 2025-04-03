@@ -1,34 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leaderboard</title>
-    <style>
-        body {
-            background: #111;
-            color: #fff;
-            font-family: monospace;
-            padding: 20px;
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        td, th {
-            border: 1px solid #333;
-            padding: 8px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaderboard | Bouder Games</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url('backgroundforboudergames.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .leaderboard {
+      text-align: left;
+      margin-top: 2rem;
+    }
+    .leaderboard-entry {
+      display: flex;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background: #444;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background: #666;
+    }
+  </style>
 </head>
 <body>
-<h2>🔥 Top Flame Clickers</h2>
-<table>
-    <tr><th>Player</th><th>XP</th></tr>
-    <tr><td>FlameKnight</td><td>205</td></tr>
-    <tr><td>BerryBlaster</td><td>174</td></tr>
-    <tr><td>PixelQueen</td><td>162</td></tr>
-</table>
+  <div class="container">
+    <h1>🔥 Leaderboard</h1>
+
+    <div class="leaderboard">
+      <div class="leaderboard-entry">
+        <span>1. FlameMaster99</span><span>5800 XP</span>
+      </div>
+      <div class="leaderboard-entry">
+        <span>2. PixelHero</span><span>4370 XP</span>
+      </div>
+      <div class="leaderboard-entry">
+        <span>3. FruitTapper</span><span>3920 XP</span>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-button">← Return to Homepage</a>
+  </div>
 </body>
 </html>
