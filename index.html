@@ -3,78 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Bouder Games</title>
-  <meta name="description" content="Creating worlds, one pixel at a time." />
+  <meta name="description" content="Bouder Games. Creating worlds, one pixel at a time.">
+
+  <!-- Favicon + Apple Touch Icon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Open Graph preview -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Bouder Games" />
   <meta property="og:description" content="Creating worlds, one pixel at a time." />
   <meta property="og:image" content="bouder-logo.png" />
   <meta property="og:url" content="https://boudergames.com" />
-  <meta name="theme-color" content="#0d0d0d" />
 
-  <!-- ✅ Correct favicon setup -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-  <!-- ✅ Google Fonts for clean look -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
       font-family: 'Inter', sans-serif;
-      background: url('city_background.png') no-repeat center center fixed;
+      background-image: url('bouder-background.png');
       background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: #0f1117;
       color: #fff;
       text-align: center;
-      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: #0d0d0d;
+      height: 100vh;
+      animation: fadeIn 1.2s ease-in;
     }
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
       margin-bottom: 1rem;
-      color: #ffa500;
     }
 
     p {
-      font-style: italic;
+      font-size: 1.2rem;
       color: #ccc;
     }
 
-    .email {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #888;
+    .logo {
+      max-width: 180px;
+      margin: 0 auto 20px;
     }
 
-    @media (max-width: 768px) {
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
       h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.2rem; }
-      body { padding: 1rem; }
+      p { font-size: 1rem; }
     }
   </style>
 </head>
-
 <body>
-  <main>
-    <h1>Bouder Games</h1>
-    <h2>🚀 Coming Soon</h2>
-    <p><em>Creating worlds, one pixel at a time.</em></p>
-    <p class="email">Contact: <a href="mailto:contact@boudergames.com" style="color: #888;">contact@boudergames.com</a></p>
-  </main>
+  <img src="bouder-logo.png" alt="Bouder Games Logo" class="logo" />
+  <h1>Bouder Games</h1>
+  <p>🚀 Coming Soon</p>
+  <p><em>Creating worlds, one pixel at a time.</em></p>
+  <p>Contact: <a href="mailto:contact@boudergames.com" style="color: #999;">contact@boudergames.com</a></p>
 </body>
 </html>
