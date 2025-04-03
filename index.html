@@ -3,60 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bouder Games - Coming Soon</title>
 
-  <!-- 🔥 Favicon -->
-  <link rel="icon" type="image/png" href="bouder-logo.png" />
+  <!-- ✅ Favicon for all browsers -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-  <title>Bouder Games</title>
+  <!-- Google Fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background-color: #0d0d0d;
-      color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0e0e10;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      flex-direction: column;
+      min-height: 100vh;
       text-align: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 600px;
     }
 
     h1 {
-      font-size: 3rem;
-      margin: 0.5rem 0;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
 
-    h2 {
-      font-size: 1.5rem;
-      margin: 0.5rem 0;
+    .coming-soon {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
-    p {
+    .tagline {
+      font-size: 1rem;
       font-style: italic;
-      color: #aaaaaa;
-      margin-top: 1rem;
+      color: #bbbbbb;
+      margin-bottom: 2rem;
     }
 
-    footer {
+    .contact {
       font-size: 0.9rem;
-      color: #666;
-      margin-top: 2rem;
+      color: #888888;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .coming-soon {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
-
 <body>
-  <!-- 🔥 Optional: Logo on page -->
-  <!-- <img src="bouder-logo.png" alt="Bouder Games Logo" width="96" /> -->
-
-  <h1>Bouder Games</h1>
-  <h2>🚀 Coming Soon</h2>
-  <p>Creating worlds, one pixel at a time.</p>
-
-  <footer>Contact: contact@boudergames.com</footer>
+  <div class="container">
+    <h1>Bouder Games</h1>
+    <div class="coming-soon">🚀 Coming Soon</div>
+    <div class="tagline"><em>Creating worlds, one pixel at a time.</em></div>
+    <div class="contact">Contact: <a href="mailto:contact@boudergames.com" style="color:#888;">contact@boudergames.com</a></div>
+  </div>
 </body>
 </html>
