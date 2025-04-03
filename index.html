@@ -4,118 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Bouder Games - Creating worlds, one pixel at a time." />
-  <meta name="keywords" content="Bouder Games, pixel games, idle clicker, berry pop, flame harvest" />
+  <meta name="keywords" content="Bouder Games, pixel games, indie game studio, Flame Harvest, Berry Pop" />
   <meta name="author" content="Bouder Games" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Bouder Games" />
   <meta property="og:description" content="Creating worlds, one pixel at a time." />
   <meta property="og:image" content="bouder-logo.png" />
   <meta property="og:url" content="https://boudergames.com" />
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
   <title>Bouder Games</title>
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Press Start 2P', monospace;
-      color: white;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Verdana', sans-serif;
       background: url('backgroundforboudergames.png') no-repeat center center fixed;
       background-size: cover;
+      color: white;
       text-align: center;
+      padding: 3rem 1rem;
     }
-    .hero {
-      padding: 80px 20px 40px;
-      animation: float 8s ease-in-out infinite;
+    h1 {
+      font-size: 2.8rem;
     }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    p {
+      font-size: 1.1rem;
+      margin: 0.6rem 0;
     }
-    .section {
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
-      margin: 40px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 600px;
-    }
-    .project-card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .project-card {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px auto;
-    }
-    .email-link {
+    a {
       color: white;
       text-decoration: underline;
+    }
+    .projects {
+      margin-top: 4rem;
+    }
+    .project-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1.5rem;
+      margin: 1rem auto;
+      border-radius: 12px;
+      max-width: 340px;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+    .project-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    .button {
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background-color: #ff5050;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .discord {
+      background-color: #5865f2;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-<div class="hero">
-  <h1>Bouder Games</h1>
-  <p>🚀 Coming Soon</p>
-  <p><em>Creating worlds, one pixel at a time.</em></p>
-  <p>Contact: <a href="mailto:contact@boudergames.com" class="email-link">contact@boudergames.com</a></p>
-</div>
+<h1>Bouder Games</h1>
+<p>🚀 Coming Soon</p>
+<p><em>Creating worlds, one pixel at a time.</em></p>
+<p>Contact: <span style="color: white;">contact@boudergames.com</span></p>
 
-<div class="section">
+<div class="projects">
   <h2>Our Projects</h2>
+
   <div class="project-card">
-    <h3>Flame Harvest</h3>
     <a href="flame-harvest.html">
-      <img src="flameharvest.webp" alt="Flame Harvest logo">
+      <img src="flameharvest.webp" alt="Flame Harvest" />
+      <h3>Flame Harvest</h3>
     </a>
     <p>A cozy idle clicker set in a world of fire and fruit.</p>
   </div>
+
   <div class="project-card">
-    <h3>Berry Pop</h3>
     <a href="berry-pop.html">
-      <img src="berrypoplogo.webp" alt="Berry Pop logo">
+      <img src="berrypoplogo.webp" alt="Berry Pop" />
+      <h3>Berry Pop</h3>
     </a>
-    <p>Catch falling berries in this colorful, juicy one-tap game!</p>
+    <p>A juicy tap game where berries drop and points pop!</p>
   </div>
+
+  <a class="button discord" href="https://discord.gg/9zqn2QNmQt" target="_blank">Join Our Discord</a>
+  <br />
+  <br />
+  <a class="button" href="blog.html">📜 Dev Blog</a>
+  <a class="button" href="leaderboard.html">🔥 Leaderboard</a>
 </div>
 
-<div class="section">
-  <h2>Developer Blog</h2>
-  <p>📝 <a href="blog.html" style="color: white; text-decoration: underline;">View Latest Patch Notes</a></p>
-</div>
-
-<div class="section">
-  <h2>🔥 XP Leaderboard</h2>
-  <iframe src="leaderboard.html" width="100%" height="300" style="border: none;"></iframe>
-</div>
-
-<div class="section">
-  <h2>✨ Join Our Community</h2>
-  <a href="https://discord.gg/9zqn2QNmQt" target="_blank">
-    <button style="font-size: 14px; padding: 10px 20px; border: none; border-radius: 8px; background-color: #7289da; color: white; cursor: pointer;">
-      Join Our Discord
-    </button>
-  </a>
-</div>
-
-<!-- Particle Background (Stars) -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
-<script>
-  tsParticles.load("tsparticles", {
-    background: { color: { value: "transparent" } },
-    particles: {
-      number: { value: 60 },
-      size: { value: 2 },
-      move: { enable: true, speed: 0.5 },
-      opacity: { value: 0.6 },
-      color: { value: "#ffffff" },
-    },
-  });
-</script>
-<div id="tsparticles"></div>
-
+<footer>
+  &copy; 2025 Bouder Games. All rights reserved.
+</footer>
 </body>
 </html>
