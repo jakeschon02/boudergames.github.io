@@ -4,96 +4,99 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bouder Games</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
 
-  <!-- SEO + Social -->
-  <meta name="description" content="Creating worlds, one pixel at a time." />
+  <!-- Open Graph Preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Bouder Games" />
   <meta property="og:description" content="Creating worlds, one pixel at a time." />
   <meta property="og:image" content="bouder-logo.png" />
   <meta property="og:url" content="https://boudergames.com" />
 
-  <!-- Icons -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
-
-  <!-- Styles -->
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: url('backgroundforboudergames.png') no-repeat center center fixed;
       background-size: cover;
-      color: white;
+      color: #fff;
       text-align: center;
     }
 
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
+    .content {
+      padding: 80px 20px 20px;
     }
 
-    h1, p {
-      margin: 10px 0;
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.2em;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+    .subtitle {
+      font-size: 1.3em;
+      margin-top: -10px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
     }
 
     .projects {
-      padding: 60px 20px;
-    }
-
-    .project-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-top: 20px;
+      margin-top: 60px;
     }
 
     .project-card {
-      background-color: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
       padding: 20px;
-      border-radius: 10px;
-      width: 240px;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: scale(1.05);
+      max-width: 300px;
+      margin: 20px auto;
+      backdrop-filter: blur(10px);
     }
 
     .project-card img {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
 
-    a {
-      color: white;
-      text-decoration: underline;
+    .project-card h2 {
+      font-size: 1.3em;
+      margin-bottom: 6px;
+    }
+
+    .project-card p {
+      font-size: 0.9em;
+      opacity: 0.85;
     }
   </style>
 </head>
 <body>
-  <h1 class="fade-in">Bouder Games</h1>
-  <p class="fade-in" style="animation-delay: 0.5s;">🚀 Coming Soon</p>
-  <p class="fade-in" style="animation-delay: 1s;"><em>Creating worlds, one pixel at a time.</em></p>
-  <p class="fade-in" style="animation-delay: 1.5s;">Contact: <a href="mailto:contact@boudergames.com">contact@boudergames.com</a></p>
+  <div class="content">
+    <h1>Bouder Games</h1>
+    <div class="subtitle">🚀 Coming Soon</div>
+    <p><em>Creating worlds, one pixel at a time.</em></p>
+    <p>Contact: <a href="mailto:contact@boudergames.com">contact@boudergames.com</a></p>
 
-  <section class="projects fade-in" style="animation-delay: 2s;">
-    <h2>Our Projects</h2>
-    <div class="project-grid">
+    <div class="projects">
+      <h2>Our Projects</h2>
+
+      <!-- 🔥 Flame Harvest -->
       <div class="project-card">
-        <img src="flameharvest.png" alt="Flame Harvest">
-        <h3>Flame Harvest</h3>
+        <img src="flameharvest.webp" alt="Flame Harvest">
+        <h2>Flame Harvest</h2>
         <p>A cozy idle clicker set in a world of fire and fruit.</p>
       </div>
+
+      <!-- 🍓 Berry Pop -->
+      <div class="project-card">
+        <img src="berrypoplogo.webp" alt="Berry Pop">
+        <h2>Berry Pop</h2>
+        <p>A colorful berry-tapping arcade game with sweet explosions.</p>
+      </div>
     </div>
-  </section>
+  </div>
 </body>
 </html>
