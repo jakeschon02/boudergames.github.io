@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bouder Games</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Bouder Games – Creating worlds, one pixel at a time. Home of Flame Harvest and Berry Pop." />
+  <meta name="keywords" content="Bouder Games, Flame Harvest, Berry Pop, idle game, pixel art, indie studio, game dev" />
+  <meta name="author" content="Bouder Games" />
 
   <!-- Open Graph Preview -->
   <meta property="og:type" content="website" />
@@ -14,89 +17,153 @@
   <meta property="og:image" content="bouder-logo.png" />
   <meta property="og:url" content="https://boudergames.com" />
 
+  <!-- Favicon + Apple Icon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Styles -->
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('backgroundforboudergames.png') no-repeat center center fixed;
-      background-size: cover;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
       color: #fff;
-      text-align: center;
+      background: url('backgroundforboudergames.png') no-repeat center center/cover;
+      height: 100%;
+      overflow-x: hidden;
     }
-
+    .loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .pixel-loader {
+      width: 32px;
+      height: 32px;
+      background: url('favicon.png') no-repeat center/contain;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.5; }
+    }
+    .cursor-sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: orange;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.7;
+      animation: fadeOut 0.7s forwards;
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; transform: scale(0); }
+    }
     .content {
-      padding: 80px 20px 20px;
+      text-align: center;
+      padding: 100px 20px;
     }
-
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 0.2em;
-    }
-
-    .subtitle {
-      font-size: 1.3em;
-      margin-top: -10px;
-    }
-
-    a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
+    h1 { font-size: 2.5rem; }
     .projects {
-      margin-top: 60px;
+      margin-top: 50px;
     }
-
     .project-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
       padding: 20px;
       max-width: 300px;
       margin: 20px auto;
-      backdrop-filter: blur(10px);
     }
-
-    .project-card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 12px;
+    img.project-logo {
+      max-width: 100%;
+      height: auto;
     }
-
-    .project-card h2 {
-      font-size: 1.3em;
-      margin-bottom: 6px;
+    .social-buttons {
+      margin-top: 20px;
     }
-
-    .project-card p {
-      font-size: 0.9em;
-      opacity: 0.85;
+    .social-buttons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    .discord-btn {
+      background-color: #5865f2;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .project-card { padding: 10px; }
     }
   </style>
+
+  <!-- Performance Optimization -->
+  <link rel="preload" href="backgroundforboudergames.png" as="image">
+  <link rel="preload" href="favicon.png" as="image">
+  <link rel="preload" href="bouder-logo.png" as="image">
 </head>
+
 <body>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="pixel-loader"></div>
+  </div>
+
   <div class="content">
     <h1>Bouder Games</h1>
-    <div class="subtitle">🚀 Coming Soon</div>
+    <p>🚀 Coming Soon</p>
     <p><em>Creating worlds, one pixel at a time.</em></p>
     <p>Contact: <a href="mailto:contact@boudergames.com">contact@boudergames.com</a></p>
 
-    <div class="projects">
-      <h2>Our Projects</h2>
+    <a class="discord-btn" href="https://discord.gg/9zqn2QNmQt" target="_blank">Join Our Discord</a>
 
-      <!-- 🔥 Flame Harvest -->
-      <div class="project-card">
-        <img src="flameharvest.webp" alt="Flame Harvest">
-        <h2>Flame Harvest</h2>
-        <p>A cozy idle clicker set in a world of fire and fruit.</p>
-      </div>
+    <h2 class="projects">Our Projects</h2>
 
-      <!-- 🍓 Berry Pop -->
-      <div class="project-card">
-        <img src="berrypoplogo.webp" alt="Berry Pop">
-        <h2>Berry Pop</h2>
-        <p>A colorful berry-tapping arcade game with sweet explosions.</p>
-      </div>
+    <div class="project-card">
+      <p>Flame Harvest</p>
+      <img class="project-logo" src="flameharvest.webp" alt="Flame Harvest Logo">
+      <p><strong>Flame Harvest</strong><br>A cozy idle clicker set in a world of fire and fruit.</p>
+    </div>
+
+    <div class="project-card">
+      <p>Berry Pop</p>
+      <img class="project-logo" src="berrypoplogo.webp" alt="Berry Pop Logo">
+      <p><strong>Berry Pop</strong><br>A juicy one-tap arcade game with fruit-falling frenzy.</p>
+    </div>
+
+    <div class="social-buttons">
+      <a href="https://twitter.com/intent/tweet?text=Check%20out%20Bouder%20Games!%20https://boudergames.com" target="_blank">Twitter</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://boudergames.com" target="_blank">Facebook</a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://boudergames.com" target="_blank">LinkedIn</a>
     </div>
   </div>
+
+  <!-- Cursor Sparkle Effect -->
+  <script>
+    document.addEventListener("mousemove", function(e) {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("cursor-sparkle");
+      sparkle.style.left = e.pageX + "px";
+      sparkle.style.top = e.pageY + "px";
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 700);
+    });
+
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
+  </script>
 </body>
 </html>
